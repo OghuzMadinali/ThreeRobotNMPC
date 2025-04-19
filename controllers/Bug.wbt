@@ -1,0 +1,143 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/pal_robotics/tiago_base/protos/TiagoBase.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/traffic/protos/TrafficCone.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/Roughcast.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.4827136581815924 0.4582801002408635 -0.7463021331392325 1.698665980273597
+  position -5.036819337154363 22.059582571611795 32.09076858832394
+  follow "ROBOT2"
+  followType "Mounted Shot"
+}
+Background {
+  skyColor [
+    0.5 0.5 0.5
+    0 0 0
+  ]
+  luminosity 2
+}
+DirectionalLight {
+  direction 3 -2 -6
+  castShadows TRUE
+}
+Floor {
+  size 25 13
+  tileSize 2 2
+}
+TiagoBase {
+  translation -11.1961 -3.37305 0.108356
+  rotation 0.00030259371846182235 0.0015607716056513946 -0.9999987362137197 0.6168969221736857
+  name "ROBOT2"
+  controller "controllersthree"
+  supervisor TRUE
+  bodySlot [
+    Lidar {
+      translation 0 0 0.5
+      name "top_lidar"
+      fieldOfView 6.28315
+      verticalFieldOfView 0.1
+      numberOfLayers 1
+      near 0.3
+      minRange 0.3
+      maxRange 5
+    }
+  ]
+}
+TiagoBase {
+  translation -10.0214 -1.19651 0.0507065
+  rotation -0.0013187317831907968 -0.0003979498272498443 0.9999990512907595 -2.5311361235041527
+  name "ROBOT1"
+  controller "controllerstwo"
+  supervisor TRUE
+  bodySlot [
+    Lidar {
+      translation 0 0 0.5
+      name "top_lidar"
+      fieldOfView 6.28315
+      verticalFieldOfView 0.1
+      numberOfLayers 1
+      near 0.3
+      minRange 0.3
+      maxRange 5
+    }
+  ]
+}
+DEF TrafficCone TrafficCone {
+  translation 10.092410708953306 3.9330426489789527 -0.004304324824014216
+  rotation -0.1640148165222731 -0.2268507756609867 -0.9600197214344994 0.03982609305533894
+  physics Physics {
+    density -1
+    mass 0.1
+  }
+}
+TiagoBase {
+  translation -9.8633 0.720998 0.0699433
+  rotation 0.0013518457617064763 0.0008003913146360832 -0.9999987659426286 2.0732291145479067
+  name "ROBOT3"
+  controller "controllers"
+  supervisor TRUE
+  bodySlot [
+    Lidar {
+      translation 0 0 0.5
+      name "top_lidar"
+      fieldOfView 6.28315
+      verticalFieldOfView 0.1
+      numberOfLayers 1
+      near 0.3
+      minRange 0.3
+      maxRange 5
+    }
+  ]
+}
+Wall {
+  translation -6.18 0.5 0
+  name "wall1"
+  size 0.2 6 2.4
+  appearance Roughcast {
+    colorOverride 0.7 0.7 0.7
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  translation -3.62706 0.234988 0
+  rotation 0 0 -1 -1.0472053071795866
+  name "wall2"
+  size 0.2 6 2.4
+  appearance Roughcast {
+    colorOverride 0.7 0.7 0.7
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  translation 4.87 -0.94998 0
+  rotation 0 0 -1 -5.307179586466759e-06
+  name "wall2(2)"
+  size 0.2 5 2.4
+  appearance Roughcast {
+    colorOverride 0.7 0.7 0.7
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  translation 6.37553 -0.518726 0
+  rotation 0 0 1 -2.3561953071795863
+  name "wall2(1)"
+  size 0.2 5 2.4
+  appearance Roughcast {
+    colorOverride 0.7 0.7 0.7
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}

@@ -1,0 +1,34 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/pal_robotics/tiago_base/protos/TiagoBase.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.5773502691896257 0.5773502691896257 0.5773502691896257 2.0944
+  position 0 0 10
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 5 5
+}
+TiagoBase {
+  hidden rotation_11 1 1.2026430473551893e-10 -1.2026474649178934e-10 1.5708
+  translation 1 1 0.0939746
+  rotation -2.1764746352687244e-07 0.9999999999999739 -7.037925617200628e-08 0.002718427631329926
+  controller "controllercompass"
+  bodySlot [
+    Compass {
+    }
+  ]
+  lidarSlot [
+    Lidar {
+    }
+  ]
+}

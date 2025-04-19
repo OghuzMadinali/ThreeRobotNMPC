@@ -1,0 +1,64 @@
+#VRML_SIM R2023b utf8
+
+WorldInfo {
+  info [
+    "Generated Webots world file"
+  ]
+  title "Sensor-Based Motion Planning and Control"
+}
+Viewpoint {
+  orientation -0.5869675714609309 0.8096104433943876 0 1.05
+  position 1.8122899766192762 2.066825354869919 3.1965547549637248
+}
+Floor {
+  size 5 5
+}
+DEF TiagoBase Robot {
+  children [
+    Lidar {
+      name "TiagoBase_LiDAR"
+    }
+  ]
+}
+DEF BostonDynamicsSpot Robot {
+  translation 1 0 1
+  children [
+    Lidar {
+      name "Spot_LiDAR"
+    }
+  ]
+}
+DEF MobileBase Robot {
+  translation -1 0 -1
+  children [
+    Lidar {
+      name "MobileBase_LiDAR"
+    }
+  ]
+}
+DEF Obstacle1 Solid {
+  translation 1 0.25 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+      }
+      geometry Box {
+        size 0.5 0.5 0.5
+      }
+    }
+  ]
+}
+DEF Obstacle2 Solid {
+  translation -1 0.25 -1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 0
+      }
+      geometry Box {
+        size 0.5 0.5 0.5
+      }
+    }
+  ]
+}
