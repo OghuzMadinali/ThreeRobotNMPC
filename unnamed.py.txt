@@ -1,7 +1,6 @@
 from controller import Robot, Compass, Motor, Accelerometer, Gyro 
 
 import math 
-
 import matplotlib.pyplot as plt 
 
   
